@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'lab7.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'staging',
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': 'diero',
-        'HOST': 'rpp-app-db-thediero.db-msk0.amvera.tech',
+        'NAME': 'mydb',
+        'USER': 'myuser',
+        'PASSWORD': 'mypass',
+        'HOST': 'lab8-sql-nktshmlv.db-msk0.amvera.tech',
     }
 }
 
