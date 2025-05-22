@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-q7b$z@!1@8x+)4(+)4d!8clidxy(oi#)_%+l9b56ep_f98(-t6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'lab8-nktshmlv.amvera.io',
+]
 
 
 # Application definition
@@ -77,13 +80,22 @@ WSGI_APPLICATION = 'lab7.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'staging',
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': 'diero',
+        'HOST': 'rpp-app-db-thediero.db-msk0.amvera.tech',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
