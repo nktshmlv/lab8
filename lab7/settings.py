@@ -30,8 +30,10 @@ ALLOWED_HOSTS = [
     'lab8-nktshmlv.amvera.io',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://lab8-nktshmlv.amvera.io",
+]
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.auth',
